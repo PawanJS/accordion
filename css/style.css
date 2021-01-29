@@ -16,10 +16,12 @@ body {
   font-size: 1.8rem;
   font-weight: 400;
   font-family: "Kumbh Sans", sans-serif;
-  background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
-  height: 100vh;
+  padding: 0 10rem;
+  background: linear-gradient(to bottom, hsl(273, 75%, 66%), hsl(240, 73%, 65%))
+    no-repeat;
   display: grid;
   place-items: center center;
+  height: 100vh;
 }
 
 .heading-1 {
@@ -28,15 +30,24 @@ body {
 }
 
 .paragraph {
-  /* display: none; */
-  /* opacity: 0; */
-  padding-bottom: 2rem;
+  display: none;
+  opacity: 0;
+  padding-top: 2rem;
+}
+
+.paragraph-active {
+  display: block;
+  opacity: 1;
 }
 
 .btn {
   border: none;
   background: transparent;
   cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
 
 .btn:focus {
@@ -55,43 +66,27 @@ body {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 5rem;
-  height: 50vh;
-  position: relative;
 }
 
 .accordion__figure {
-  overflow: hidden;
+  /* overflow: hidden; */
+  padding: 3rem;
   align-self: center;
 }
 
-.accordion__figure--bg {
-  position: absolute;
-  width: 50%;
-  bottom: 6rem;
-  left: -13rem;
-}
-
-.accordion__figure--bg-box {
-  position: absolute;
-  top: 40%;
-  left: -10rem;
-  z-index: 10;
-}
-
 .accordion__figure--img {
-  transform: translateX(-6rem);
+  /* transform: translateX(-6rem); */
+  width: 100%;
 }
 
 .accordion__text-box {
   padding: 5rem;
+  width: 100%;
 }
 
 .accordion__question {
   padding-bottom: 2rem;
   border-bottom: 1px solid rgba(51, 51, 51, 0.226);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
 .accordion__question:not(:last-of-type) {
@@ -101,4 +96,23 @@ body {
 .accordion__icon {
   width: 2rem;
   height: 2rem;
+}
+
+@media only screen and (max-width: 75em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media only screen and (max-width: 60em) {
+  body {
+    height: max-content;
+  }
+  .accordion__container {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+  .accordion__figure--img {
+    transform: translateX(0);
+  }
 }
