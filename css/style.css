@@ -111,6 +111,7 @@ body {
 .accordion__icon {
   width: 1.3rem;
   height: 1.3rem;
+  margin-left: 1.5rem;
   transition: all 0.3s ease-in-out;
 }
 
@@ -147,3 +148,80 @@ body {
 }
 
 /** Media queries  */
+@media only screen and (max-width: 68.75em) {
+  .accordion {
+    grid-template-columns: 1fr;
+    max-width: 60rem;
+    max-height: 50rem;
+    padding: 5rem;
+  }
+
+  .accordion--img {
+    top: -9rem;
+    left: 10%;
+    width: 10rem;
+  }
+
+  .accordion--img-bg {
+    top: -18.5rem;
+    left: 15%;
+    width: 30rem;
+  }
+
+  .accordion--img-pattern {
+    width: 30rem;
+    top: -21.5rem;
+    left: 15%;
+  }
+}
+
+@media only screen and (max-width: 40em) {
+  .container {
+    padding: 0 3rem;
+  }
+}
+
+@media only screen and (max-width: 36em) {
+  .accordion--img {
+    left: 5%;
+  }
+
+  .accordion--img-bg,
+  .accordion--img-pattern {
+    left: 10%;
+  }
+}
+
+@media only screen and (max-width: 30em) {
+  .accordion {
+    padding: 0 2rem;
+  }
+
+  .accordion--img {
+    left: 5%;
+    top: -3rem;
+    width: 7rem;
+  }
+
+  .accordion--img-bg {
+    top: -9rem;
+  }
+
+  .accordion--img-pattern {
+    top: -11rem;
+  }
+
+  .accordion--img-bg,
+  .accordion--img-pattern {
+    left: 10%;
+    width: 20rem;
+  }
+
+  .btn {
+    font-size: 1.6rem;
+  }
+
+  body {
+    font-size: 1.4rem;
+  }
+}
