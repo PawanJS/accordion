@@ -21,48 +21,106 @@
     <title>Frontend Mentor | FAQ Accordion Card</title>
   </head>
   <body>
-    <div class="accordion__container">
-      <div class="accordion__figure">
-        <figure class="accordion__figure--item">
+    <div class="container">
+      <!--? Accordion  Images -->
+      <div class="accordion">
+        <div class="accordion__img-container">
+          <img
+            src="images/bg-pattern-desktop.svg"
+            alt="Bg-Image-shadow"
+            class="accordion--img-pattern"
+          />
           <img
             src="images/illustration-woman-online-desktop.svg"
-            alt="illustration-woman-online-desktop"
-            class="accordion__figure--img"
+            alt="Bg-Image"
+            class="accordion--img-bg"
           />
-        </figure>
-      </div>
-      <div class="accordion__text-box">
-        <h1 class="heading-1">FAQ</h1>
-        <div class="accordion__question js-accordion mt-md">
-          <button class="btn js-btn-open">
-            <span>How many team members can I invite? </span>
-            <svg class="accordion__icon js-btn-open">
-              <use xlink:href="images/sprite.svg#icon-arrow-down"></use>
-            </svg>
-          </button>
-          <p class="paragraph js-paragraph">
-            You can invite up to 2 additional users on the Free plan. There is
-            no limit on team members for the Premium plan.
-          </p>
+          <img
+            src="images/illustration-box-desktop.svg"
+            alt="Box-Image"
+            class="accordion--img"
+          />
+        </div>
+
+        <!--? Accordion  -->
+        <div class="accordion__faq">
+          <h1 class="heading-1">FAQ</h1>
+          <ul class="accordion__list">
+            <li class="accordion__que">
+              <button class="btn js-btn">
+                How many team members can I invite?
+                <svg class="accordion__icon">
+                  <use xlink:href="images/sprite.svg#icon-arrow-down"></use>
+                </svg>
+              </button>
+              <div class="accordion__answer">
+                <span class="accordion__answer-text">
+                  You can invite up to 2 additional users on the Free plan.
+                  There is no limit on team members for the Premium plan.
+                </span>
+              </div>
+            </li>
+            <li class="accordion__que">
+              <button class="btn js-btn">
+                What is the maximum file upload size?
+                <svg class="accordion__icon">
+                  <use xlink:href="images/sprite.svg#icon-arrow-down"></use>
+                </svg>
+              </button>
+              <div class="accordion__answer">
+                <span class="accordion__answer-text">
+                  No more than 2GB. All files in your account must fit your
+                  allotted storage space
+                </span>
+              </div>
+            </li>
+            <li class="accordion__que">
+              <button class="btn js-btn">
+                How do I reset my password?
+                <svg class="accordion__icon">
+                  <use xlink:href="images/sprite.svg#icon-arrow-down"></use>
+                </svg>
+              </button>
+              <div class="accordion__answer">
+                <span class="accordion__answer-text">
+                  Click “Forgot password” from the login page or “Change
+                  password” from your profile page. A reset link will be emailed
+                  to you.
+                </span>
+              </div>
+            </li>
+            <li class="accordion__que">
+              <button class="btn js-btn">
+                Can I cancel my subscription?
+                <svg class="accordion__icon">
+                  <use xlink:href="images/sprite.svg#icon-arrow-down"></use>
+                </svg>
+              </button>
+              <div class="accordion__answer">
+                <span class="accordion__answer-text">
+                  Yes! Send us a message and we’ll process your request no
+                  questions asked.
+                </span>
+              </div>
+            </li>
+            <li class="accordion__que">
+              <button class="btn js-btn">
+                Do you provide additional support?
+                <svg class="accordion__icon">
+                  <use xlink:href="images/sprite.svg#icon-arrow-down"></use>
+                </svg>
+              </button>
+              <div class="accordion__answer">
+                <span class="accordion__answer-text">
+                  Chat and email support is available 24/7. Phone lines are open
+                  during normal business hours.
+                </span>
+              </div>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
-
-    <!--
-  
-
-  What is the maximum file upload size?
-  No more than 2GB. All files in your account must fit your allotted storage space.
-
-  How do I reset my password?
-  Click “Forgot password” from the login page or “Change password” from your profile page.
-  A reset link will be emailed to you.
-
-  Can I cancel my subscription?
-  Yes! Send us a message and we’ll process your request no questions asked.
-
-  Do you provide additional support?
-  Chat and email support is available 24/7. Phone lines are open during normal business hours. -->
 
     <!-- <div class="attribution">
       Challenge by

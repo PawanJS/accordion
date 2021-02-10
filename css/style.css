@@ -1,9 +1,11 @@
+/** Basic CSS  */
 *,
 *::before,
 *::after {
   margin: 0;
   padding: 0;
   box-sizing: inherit;
+  list-style: none;
 }
 
 html {
@@ -13,31 +15,17 @@ html {
 
 body {
   line-height: 1.5;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   font-weight: 400;
   font-family: "Kumbh Sans", sans-serif;
-  padding: 0 10rem;
-  background: linear-gradient(to bottom, hsl(273, 75%, 66%), hsl(240, 73%, 65%))
-    no-repeat;
-  display: grid;
-  place-items: center center;
-  height: 100vh;
+  background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+  min-height: 100vh;
+  overflow: hidden;
 }
 
 .heading-1 {
   font-size: calc(1.6rem + 1.6vw);
   font-weight: 700;
-}
-
-.paragraph {
-  display: none;
-  opacity: 0;
-  padding-top: 2rem;
-}
-
-.paragraph-active {
-  display: block;
-  opacity: 1;
 }
 
 .btn {
@@ -48,26 +36,112 @@ body {
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  color: hsl(240, 6%, 50%);
+  transition: color 0.2s;
+  font-size: 1.7rem;
 }
 
 .btn:focus {
   outline: none;
 }
 
-.mt-md {
-  margin-top: 4rem;
+.btn:hover {
+  color: hsl(14, 88%, 65%);
 }
 
-.attribution {
-  font-size: 11px;
-  text-align: center;
-}
-.attribution a {
-  color: hsl(228, 45%, 44%);
+.container {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
 }
 
-@media only screen and (max-width: 75em) {
-  html {
-    font-size: 50%;
-  }
+/** Accordion  */
+.accordion {
+  max-width: 100rem;
+  width: 100%;
+  max-height: 50rem;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.4);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 5rem;
+  padding-right: 10rem;
 }
+
+.accordion__img-container {
+  position: relative;
+}
+
+.accordion--img,
+.accordion--img-bg,
+.accordion--img-pattern {
+  position: absolute;
+}
+
+.accordion--img {
+  top: 40%;
+  left: -9rem;
+}
+
+.accordion--img-bg {
+  top: 10%;
+  left: -4rem;
+}
+
+.accordion--img-pattern {
+  width: 70rem;
+  top: -12rem;
+  left: -28rem;
+}
+
+.accordion__faq {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.accordion__que {
+  padding: 1.8rem 0;
+  color: hsl(240, 6%, 50%);
+  border-bottom: 0.5px solid hsla(240, 6%, 50%, 0.349);
+}
+
+.accordion__icon {
+  width: 1.3rem;
+  height: 1.3rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.accordion__answer {
+  visibility: hidden;
+  height: 0;
+  transition: height 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+}
+
+.accordion__answer-text {
+  display: inline-block;
+}
+
+/** Classes to be added with javascript  */
+.active {
+  padding: 1rem 0 0;
+}
+
+.active .accordion__answer {
+  visibility: visible;
+  height: 8rem;
+}
+
+.active .btn {
+  font-weight: 700;
+}
+
+.active .accordion__icon {
+  transform: rotate(180deg);
+}
+
+/** Media queries  */
