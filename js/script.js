@@ -15,4 +15,16 @@ btnAnswer.forEach((btn) => {
 });
 
 // * The modern way
-const btnAnswerLi = document.querySelectorAll(".js-li");
+// const btnAnswerLi = document.querySelectorAll(".js-li");
+
+// btnAnswerLi.addEventListener("click", function (e) {
+//   const btn = e.target.closet(".js-btn");
+//   if (btn.parentElement.classList.contains("active")) {
+//     btn.parentElement.classList.toggle("active");
+//   } else {
+//     btnAnswer.forEach((btn) => {
+//       btn.parentElement.classList.remove("active");
+//     });
+//     btn.parentElement.classList.add("active");
+//   }
+// });
