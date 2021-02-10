@@ -117,9 +117,10 @@ body {
 .accordion__answer {
   visibility: hidden;
   height: 0;
-  transition: height 0.3s ease-in-out;
+  opacity: 0;
   display: flex;
   align-items: center;
+  transition: height 0.3s, opacity 0.3s ease-in-out;
 }
 
 .accordion__answer-text {
@@ -134,6 +135,7 @@ body {
 .active .accordion__answer {
   visibility: visible;
   height: 8rem;
+  opacity: 1;
 }
 
 .active .btn {
