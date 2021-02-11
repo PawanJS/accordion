@@ -128,6 +128,15 @@ body {
   display: inline-block;
 }
 
+.attribution a {
+  color: hsl(14, 88%, 65%);
+  transition: color 0.2s;
+}
+
+.attribution a:hover {
+  color: hsl(237, 12%, 33%);
+}
+
 /** Classes to be added with javascript  */
 .active {
   padding: 1rem 0 0;
